@@ -7,7 +7,7 @@
     "build": "tsc",
     "prestart": "npm run build",
     "start": "ts-node-dev --respawn --transpile-only src/index.ts",
-    "test": "jest --testTimeout=10000 --runInBand --forceExit"
+    "test": "jest --testTimeout=10000 --runInBand --forceExit --silent"
   },
   "keywords": [],
   "author": "",

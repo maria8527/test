@@ -42,7 +42,7 @@ prestaRouter.post("/mongo", validator.body(prestaSchema), async (_req: Request, 
     }
 });
 
-prestaRouter.put("/mongo:id", validator.body(prestaSchema), async (_req: Request, res: Response) => {
+prestaRouter.put("/mongo/:id", validator.body(prestaSchema), async (_req: Request, res: Response) => {
     const id = _req.params.id;
 
     try {
@@ -59,7 +59,7 @@ prestaRouter.put("/mongo:id", validator.body(prestaSchema), async (_req: Request
     }
 });
 
-prestaRouter.delete("mongo/:id",  validator.body(prestaSchema), async (req: Request, res: Response) => {
+prestaRouter.delete("/mongo/:id",  validator.body(prestaSchema), async (req: Request, res: Response) => {
     const id = req.params.id;
 
     try {
